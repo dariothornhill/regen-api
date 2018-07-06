@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "regen-lambda-execution-role",
+    "name": "regen-api",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "tji8hz02rb"
+  }
+}

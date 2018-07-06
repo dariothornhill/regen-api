@@ -1,0 +1,42 @@
+{
+  "name": "regen-api",
+  "version": "1.0.0",
+  "description": "An api for generating react apps and staging on s3 bucket",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "deploy": "claudia create --version dev --region us-east-1 --role regen-lambda-execution-role --api-module app",
+    "hello": "claudia create --version dev --region us-east-1 --role regen-lambda-execution-role --handler lambda.handler --deploy-proxy-api",
+    "release": "claudia set-version --version v1",
+    "start": "ntl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariothornhill/regen-api.git"
+  },
+  "keywords": [
+    "React",
+    "Gatsby",
+    "Lambda"
+  ],
+  "author": "Dario Thornhill <dariothornhill@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dariothornhill/regen-api/issues"
+  },
+  "homepage": "https://github.com/dariothornhill/regen-api#readme",
+  "devDependencies": {
+    "claudia": "^5.0.0",
+    "ntl": "^3.0.0"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.11",
+    "aws-serverless-express": "^3.2.0",
+    "child-process-promise": "^2.2.1",
+    "claudia-api-builder": "^4.1.1",
+    "express": "^4.16.3",
+    "gatsby": "^1.9.273",
+    "s3-unzip": "^0.1.13",
+    "zip-folder": "^1.0.0"
+  }
+}
